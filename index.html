@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal portfolio of Divya Sri Kantamani - Full-Stack / Flutter Developer based in Kovvur. Replicating energetic 3D layered motion, high performance WebGL, and glassmorphism design." />
+    <title>Divya Sri Kantamani | Full-Stack & Flutter Developer Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Icons (FontAwesome for social & contact icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script type="module" crossorigin src="/divya-sri-portfolio/assets/index-BVWQeKmG.js"></script>
+    <link rel="stylesheet" crossorigin href="/divya-sri-portfolio/assets/index-Dqj5Yk2H.css">
+  </head>
+  <body>
+    <!-- Background Audio Elements (Optional Extra Credit) -->
+    <div class="audio-control-container">
+      <button id="audio-toggle" class="audio-btn" aria-label="Toggle Background Music" title="Toggle background music">
+        <i class="fa-solid fa-volume-mute"></i>
+      </button>
+      <audio id="bg-audio" loop src="https://assets.mixkit.co/active_storage/sfx/2568/2568-84.wav"></audio>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+      <div class="header-container">
+        <a href="#home" class="logo">
+          <span class="logo-accent">&lt;</span>Divya Sri<span class="logo-accent"> /&gt;</span>
+        </a>
+        
+        <nav class="nav" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#achievements" class="nav-link">Achievements</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-actions">
+          <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark/Light Mode">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          
+          <div class="social-links header-socials">
+            <a href="https://github.com/divyasri0629" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/divyasrikantamani" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+
+          <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay">
+      <ul class="mobile-nav-list">
+        <li><a href="#home" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+        <li><a href="#education" class="mobile-nav-link">Education</a></li>
+        <li><a href="#achievements" class="mobile-nav-link">Achievements</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero-section">
+        <!-- 3D Canvas Background -->
+        <div class="canvas-container">
+          <canvas id="hero-canvas"></canvas>
+        </div>
+        
+        <div class="hero-content-wrapper">
+          <div class="hero-left">
+            <div class="hero-badge reveal-item">
+              <span class="badge-dot"></span> Available for Opportunities
+            </div>
+            
+            <h1 class="hero-title reveal-item">
+              Hi, I'm <span class="text-gradient">Divya Sri Kantamani</span>
+            </h1>
+            
+            <h2 class="hero-subtitle reveal-item">
+              <span id="typed-headline">Full‑Stack / Flutter Developer</span>
+            </h2>
+            
+            <p class="hero-tagline reveal-item">
+              Crafting fluid mobile experiences and scalable full-stack applications with high performance and polished, interactive user interfaces.
+            </p>
+            
+            <div class="hero-ctas reveal-item">
+              <a href="#projects" class="btn btn-primary">
+                View Projects <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="/resume.pdf" target="_blank" class="btn btn-secondary">
+                Download Resume <i class="fa-solid fa-download"></i>
+              </a>
+              <a href="#contact" class="btn btn-outline">
+                Contact
+              </a>
+            </div>
+          </div>
+          
+          <div class="hero-right reveal-item">
+            <!-- 3D Floating Interactive Card Stack (Three.js / CSS 3D emulation) -->
+            <div class="card-stack-container">
+              <div class="card-3d card-3d-1">
+                <div class="card-3d-inner">
+                  <div class="card-tag">EXPERT</div>
+                  <h3>Flutter / Dart</h3>
+                  <p>Cross-platform application design & development.</p>
+                  <div class="card-icon"><i class="fa-brands fa-flutter"></i></div>
+                </div>
+              </div>
+              <div class="card-3d card-3d-2">
+                <div class="card-3d-inner">
+                  <div class="card-tag">STACK</div>
+                  <h3>Full‑Stack Basics</h3>
+                  <p>Node.js, Express, and modern SQL databases.</p>
+                  <div class="card-icon"><i class="fa-brands fa-node-js"></i></div>
+                </div>
+              </div>
+              <div class="card-3d card-3d-3">
+                <div class="card-3d-inner">
+                  <div class="card-tag">CORE</div>
+                  <h3>Problem Solver</h3>
+                  <p>Strong foundation in DSA & algorithms.</p>
+                  <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="scroll-indicator">
+          <span class="mouse-icon">
+            <span class="mouse-wheel"></span>
+          </span>
+          Scroll Down
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about-section container">
+        <div class="section-header">
+          <span class="section-tag">01 // PROFILE</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-line"></div>
+        </div>
+        
+        <div class="about-grid">
+          <div class="about-image-container">
+            <div class="about-image-wrapper">
+              <img src="/divya-sri-portfolio/profile.jpg" alt="Divya Sri Kantamani" class="about-img" />
+              <div class="about-image-overlay"></div>
+              <div class="image-accent-border"></div>
+            </div>
+          </div>
+          
+          <div class="about-info-wrapper">
+            <h3 class="about-headline">Passionate Software Engineer</h3>
+            <p class="about-text">
+              I am a dedicated software developer based in <strong>Kovvur</strong> with a strong foundation in Full‑Stack and Flutter technologies. Currently holding a B.Tech in Information Technology, I combine analytical problem-solving with creative user interface design to develop applications that run seamlessly on mobile, web, and desktop platforms.
+            </p>
+            <p class="about-text">
+              My core strengths reside in Data Structures, Algorithms, and clean system design. I enjoy building responsive visual experiences and integrating REST APIs, ensuring the backend logic is as elegant as the user interface.
+            </p>
+            
+            <div class="contact-card-grid">
+              <div class="contact-info-card">
+                <div class="contact-info-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                <div class="contact-info-content">
+                  <h4>Location</h4>
+                  <p>Kovvur, Andhra Pradesh, India</p>
+                </div>
+              </div>
+              
+              <div class="contact-info-card">
+                <div class="contact-info-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="contact-info-content">
+                  <h4>Email</h4>
+                  <p><a href="mailto:divyasrik06@gmail.com">divyasrik06@gmail.com</a></p>
+                </div>
+              </div>
+              
+              <div class="contact-info-card">
+                <div class="contact-info-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="contact-info-content">
+                  <h4>Phone</h4>
+                  <p><a href="tel:+916300120711">+91 63001 20711</a></p>
+                </div>
+              </div>
+              
+              <div class="contact-info-card">
+                <div class="contact-info-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div class="contact-info-content">
+                  <h4>LinkedIn</h4>
+                  <p><a href="https://linkedin.com/in/divyasrikantamani" target="_blank" rel="noopener noreferrer">divyasrikantamani</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="skills-section container">
+        <div class="section-header">
+          <span class="section-tag">02 // ARCHITECTURE</span>
+          <h2 class="section-title">Technical Expertise</h2>
+          <div class="section-line"></div>
+        </div>
+        
+        <div class="skills-grid">
+          <!-- Skill Category 1 -->
+          <div class="skill-category-card">
+            <h3><i class="fa-solid fa-code text-gradient"></i> Programming Languages</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-meta"><span>Python</span><span class="skill-percentage">90%</span></div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="90"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span>Java</span><span class="skill-percentage">85%</span></div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="85"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span>C</span><span class="skill-percentage">80%</span></div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="80"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span>JavaScript (ES6+)</span><span class="skill-percentage">85%</span></div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="85"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span>Dart</span><span class="skill-percentage">90%</span></div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="90"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Category 2 -->
+          <div class="skill-category-card">
+            <h3><i class="fa-solid fa-server text-gradient"></i> Backend & DB</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-meta"><span>Node.js</span><span class="skill-percentage">80%</span></div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="80"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span>Express.js</span><span class="skill-percentage">80%</span></div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="80"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span>SQL & MySQL</span><span class="skill-percentage">85%</span></div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="85"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Category 3 -->
+          <div class="skill-category-card">
+            <h3><i class="fa-solid fa-laptop-code text-gradient"></i> Frontend & Frameworks</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-meta"><span>Flutter</span><span class="skill-percentage">92%</span></div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="92"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span>HTML5 / CSS3</span><span class="skill-percentage">90%</span></div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="90"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span>Bootstrap</span><span class="skill-percentage">85%</span></div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="85"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Category 4 -->
+          <div class="skill-category-card">
+            <h3><i class="fa-solid fa-toolbox text-gradient"></i> Tools & Strengths</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-meta"><span>Git & GitHub</span><span class="skill-percentage">85%</span></div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="85"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span>Postman / VS Code</span><span class="skill-percentage">90%</span></div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="90"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span>Data Structures & Algorithms</span><span class="skill-percentage">88%</span></div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="88"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span>Problem Solving</span><span class="skill-percentage">90%</span></div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="90"></div></div>
+              </div>
+            </div>
+            
+            <!-- Small Lottie Animation Container -->
+            <div class="lottie-badge-container">
+              <div id="lottie-skill-badge"></div>
+              <span>Certified Expert</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="projects-section container">
+        <div class="section-header">
+          <span class="section-tag">03 // INNOVATIONS</span>
+          <h2 class="section-title">Selected Projects</h2>
+          <div class="section-line"></div>
+        </div>
+        
+        <div class="projects-grid">
+          <!-- Project 1: GraduWay -->
+          <div class="project-card-wrapper" data-project-id="graduway">
+            <div class="project-card">
+              <div class="project-card-header">
+                <i class="fa-solid fa-graduation-cap project-icon"></i>
+                <span class="project-year">2026</span>
+              </div>
+              <h3>GraduWay</h3>
+              <p class="project-short-desc">A comprehensive alumni networking and mentorship web application designed for graduates.</p>
+              <div class="project-tech-tags">
+                <span>Flutter</span>
+                <span>Dart</span>
+                <span>Node.js</span>
+              </div>
+              <div class="project-links">
+                <button class="btn-text open-modal-btn">View Case Study <i class="fa-solid fa-arrow-right"></i></button>
+                <a href="https://github.com/NagaSaiTejo/GraduWay" target="_blank" rel="noopener noreferrer" class="project-github-link" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: CrackIt -->
+          <div class="project-card-wrapper" data-project-id="crackit">
+            <div class="project-card">
+              <div class="project-card-header">
+                <i class="fa-solid fa-award project-icon"></i>
+                <span class="project-year">2026</span>
+              </div>
+              <h3>CrackIt</h3>
+              <p class="project-short-desc">A platform dedicated to interview preparation, offering structured preparation modules.</p>
+              <div class="project-tech-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JS</span>
+              </div>
+              <div class="project-links">
+                <button class="btn-text open-modal-btn">View Case Study <i class="fa-solid fa-arrow-right"></i></button>
+                <a href="https://github.com/divyasri0629/CrackIt" target="_blank" rel="noopener noreferrer" class="project-github-link" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: ResQblood -->
+          <div class="project-card-wrapper" data-project-id="resqblood">
+            <div class="project-card">
+              <div class="project-card-header">
+                <i class="fa-solid fa-droplet project-icon"></i>
+                <span class="project-year">2025</span>
+              </div>
+              <h3>ResQblood</h3>
+              <p class="project-short-desc">Emergency blood donation and request application targeting immediate neighborhood matches.</p>
+              <div class="project-tech-tags">
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>MySQL</span>
+              </div>
+              <div class="project-links">
+                <button class="btn-text open-modal-btn">View Case Study <i class="fa-solid fa-arrow-right"></i></button>
+                <a href="https://github.com/divyasri0629/ResQblood" target="_blank" rel="noopener noreferrer" class="project-github-link" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Career Application -->
+          <div class="project-card-wrapper" data-project-id="career-app">
+            <div class="project-card">
+              <div class="project-card-header">
+                <i class="fa-solid fa-briefcase project-icon"></i>
+                <span class="project-year">2025</span>
+              </div>
+              <h3>Career Application</h3>
+              <p class="project-short-desc">A mobile career platform assisting job seekers in managing job application workflows.</p>
+              <div class="project-tech-tags">
+                <span>Flutter</span>
+                <span>Dart</span>
+                <span>REST API</span>
+              </div>
+              <div class="project-links">
+                <button class="btn-text open-modal-btn">View Case Study <i class="fa-solid fa-arrow-right"></i></button>
+                <span class="project-no-link"><i class="fa-solid fa-mobile-screen"></i> Mobile App</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Resume Builder -->
+          <div class="project-card-wrapper" data-project-id="resume-builder">
+            <div class="project-card">
+              <div class="project-card-header">
+                <i class="fa-solid fa-file-invoice project-icon"></i>
+                <span class="project-year">2025</span>
+              </div>
+              <h3>Resume Builder</h3>
+              <p class="project-short-desc">An interactive web application helping users build and export industry-standard resumes.</p>
+              <div class="project-tech-tags">
+                <span>JavaScript</span>
+                <span>Bootstrap</span>
+                <span>CSS Grid</span>
+              </div>
+              <div class="project-links">
+                <button class="btn-text open-modal-btn">View Case Study <i class="fa-solid fa-arrow-right"></i></button>
+                <span class="project-no-link"><i class="fa-solid fa-globe"></i> Web App</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="experience-section container">
+        <div class="section-header">
+          <span class="section-tag">04 // TIMELINE</span>
+          <h2 class="section-title">Work Experience</h2>
+          <div class="section-line"></div>
+        </div>
+        
+        <div class="timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">04-May-2026 to 26-June-2026</div>
+            <div class="timeline-content">
+              <h3>Intern (FSD with Flutter)</h3>
+              <h4 class="company-name text-gradient">Technical Hub Private Limited</h4>
+              <p class="timeline-highlight-box">
+                <em>Offer Highlight:</em> Successfully completed Full-Stack & Flutter internship program focused on modular structures, mobile architecture, and API integration.
+              </p>
+              <ul class="timeline-bullets">
+                <li>Focused on full stack development utilizing Dart and Flutter SDK for cross-platform app design.</li>
+                <li>Designed complex responsive layouts that render smoothly on both high-resolution tablets and mobile displays.</li>
+                <li>Gained solid hands-on understanding of widget states, hooks, and clean code integration guidelines.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Previous Term</div>
+            <div class="timeline-content">
+              <h3>Frontend Developer Intern</h3>
+              <h4 class="company-name text-gradient">Atamai Solution</h4>
+              <ul class="timeline-bullets">
+                <li>Developed clean, modular, and fully responsive user interfaces using HTML5, CSS3, and modern Javascript modules.</li>
+                <li>Integrated REST API endpoints dynamically to deliver high-performance real-time features on frontend modules.</li>
+                <li>Optimized assets and static templates to boost page speed performance score to match target benchmarks.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section id="education" class="education-section container">
+        <div class="section-header">
+          <span class="section-tag">05 // BACKGROUND</span>
+          <h2 class="section-title">Education</h2>
+          <div class="section-line"></div>
+        </div>
+        
+        <div class="education-grid">
+          <!-- Education Card 1 -->
+          <div class="education-card">
+            <div class="education-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="education-meta">
+              <span class="edu-duration">Undergraduate</span>
+              <h3>B.Tech in Information Technology</h3>
+              <h4 class="school-name">Aditya Engineering College</h4>
+            </div>
+            <div class="education-score">
+              <span class="score-label">CGPA</span>
+              <span class="score-value">9.0 / 10</span>
+            </div>
+          </div>
+
+          <!-- Education Card 2 -->
+          <div class="education-card">
+            <div class="education-icon"><i class="fa-solid fa-school"></i></div>
+            <div class="education-meta">
+              <span class="edu-duration">Intermediate (MPC)</span>
+              <h3>High School / Intermediate Board</h3>
+              <h4 class="school-name">Tirumala Junior College</h4>
+            </div>
+            <div class="education-score">
+              <span class="score-label">Percentage</span>
+              <span class="score-value">95.6%</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Achievements Section -->
+      <section id="achievements" class="achievements-section container">
+        <div class="section-header">
+          <span class="section-tag">06 // CREDENTIALS</span>
+          <h2 class="section-title">Achievements & Certifications</h2>
+          <div class="section-line"></div>
+        </div>
+        
+        <div class="achievements-list">
+          <div class="achievement-badge-card">
+            <div class="badge-icon-wrapper">
+              <i class="fa-solid fa-certificate"></i>
+            </div>
+            <div class="badge-content">
+              <h3>Flutter Development Certificate</h3>
+              <p>Issued by Technical Hub Private Limited for successful execution and testing of Flutter visual models and API hooks.</p>
+            </div>
+          </div>
+
+          <div class="achievement-badge-card">
+            <div class="badge-icon-wrapper">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div class="badge-content">
+              <h3>Advanced Data Structures and Algorithms Completion</h3>
+              <p>Recognized for deep problem-solving skills, and optimization of algorithms in C and Java.</p>
+            </div>
+          </div>
+
+          <div class="achievement-badge-card">
+            <div class="badge-icon-wrapper">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="badge-content">
+              <h3>Problem Solving Certificate (HackerRank & LeetCode)</h3>
+              <p>Achieved top badges in problem-solving and basic algorithmic challenges across online judge systems.</p>
+            </div>
+          </div>
+
+          <div class="achievement-badge-card">
+            <div class="badge-icon-wrapper">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="badge-content">
+              <h3>Certified Full-Stack Developer Basics</h3>
+              <p>Validation of backend server models, API routers (Express.js), and relational databases (SQL).</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">07 // CORRESPONDENCE</span>
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="section-line"></div>
+          </div>
+          
+          <div class="contact-grid">
+            <div class="contact-text-column">
+              <h3>Let's build something remarkable together.</h3>
+              <p>
+                I'm actively looking for full-stack and mobile app development roles. If you have an exciting project, a role that matches my skills, or if you simply want to connect, feel free to drop a message!
+              </p>
+              
+              <div class="contact-direct-info">
+                <div class="direct-info-item">
+                  <i class="fa-solid fa-envelope"></i>
+                  <div>
+                    <span>Write an Email</span>
+                    <a href="mailto:divyasrik06@gmail.com">divyasrik06@gmail.com</a>
+                  </div>
+                </div>
+                
+                <div class="direct-info-item">
+                  <i class="fa-solid fa-phone"></i>
+                  <div>
+                    <span>Call Me Direct</span>
+                    <a href="tel:+916300120711">+91 63001 20711</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact-form-column">
+              <form id="contact-form" class="contact-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="form-name">Full Name *</label>
+                    <input type="text" id="form-name" name="name" required placeholder="John Doe" />
+                  </div>
+                  <div class="form-group">
+                    <label for="form-email">Email Address *</label>
+                    <input type="email" id="form-email" name="email" required placeholder="john@example.com" />
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="form-subject">Subject</label>
+                  <input type="text" id="form-subject" name="subject" placeholder="Project Discussion" />
+                </div>
+                
+                <div class="form-group">
+                  <label for="form-message">Message *</label>
+                  <textarea id="form-message" name="message" required placeholder="Hello Divya, let's collaborate on..." rows="5"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-submit">
+                  Send Message <i class="fa-solid fa-paper-plane"></i>
+                </button>
+                <div id="form-status" class="form-status"></div>
+              </form>
+            </div>
+          </div>
+          
+          <footer class="footer">
+            <p>&copy; 2026 Divya Sri Kantamani. All Rights Reserved. Built with Vite, Three.js, and GSAP.</p>
+            <div class="social-links footer-socials">
+              <a href="https://github.com/divyasri0629" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://linkedin.com/in/divyasrikantamani" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <!-- Case Study Modal -->
+    <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-backdrop"></div>
+      <div class="modal-content-wrapper">
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+        <div class="modal-body">
+          <div class="modal-left">
+            <div class="modal-image-showcase">
+              <div class="modal-placeholder-img">
+                <i class="fa-regular fa-image"></i>
+                <span>Visual Demonstration</span>
+              </div>
+            </div>
+          </div>
+          <div class="modal-right">
+            <span class="modal-tag">CASE STUDY</span>
+            <h2 id="modal-title">Project Title</h2>
+            <div class="modal-tech-tags" id="modal-tech">
+              <!-- Dynamically populated -->
+            </div>
+            <div class="modal-scroll-content">
+              <h3>Overview</h3>
+              <p id="modal-desc">Detailed project description goes here...</p>
+              
+              <h3>Key Features</h3>
+              <ul id="modal-features">
+                <!-- Dynamically populated -->
+              </ul>
+            </div>
+            <div class="modal-footer-actions">
+              <a href="#" id="modal-code-link" target="_blank" class="btn btn-primary">
+                View Source Code <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="#" id="modal-live-link" target="_blank" class="btn btn-secondary">
+                Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+  </body>
+</html>
